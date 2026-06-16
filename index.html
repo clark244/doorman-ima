@@ -676,8 +676,12 @@ nav { padding: 12px 0; flex: 1; }
 }
 .print-btn:hover { background: var(--cobalt-d); }
 
+/* Hidden on screen, restored in print */
+.print-only { display: none; }
+
 @media print {
   #sidebar,.print-btn { display: none !important; }
+  .print-only { display: block !important; }
   #main { margin-left: 0 !important; }
   .priority-card-body { display: block !important; }
   .priority-chevron { display: none; }
@@ -1067,6 +1071,7 @@ nav { padding: 12px 0; flex: 1; }
     </div><!-- /view-meas -->
 
 
+    <div class="print-only">
     <h3 class="sub-header">Model Description</h3>
     <div class="sub-rule"></div>
     <table class="model-table">
@@ -1081,6 +1086,7 @@ nav { padding: 12px 0; flex: 1; }
         <tr><td>Intended Outcome</td><td>Distraction-free classrooms and recovered instructional time. Proximal: reduced phone-related disruptions during class, fewer phone-related disciplinary referrals, teacher time recovered from automated attendance and reduced enforcement burden. Distal: student digital self-regulation — the ability to coexist productively with phones, developed through daily practice. Student outcomes are the primary impact claim; teacher and administrator experience improvements are important but secondary.</td></tr>
       </tbody>
     </table>
+    </div><!-- /print-only Model Description -->
   </section>
 
 
